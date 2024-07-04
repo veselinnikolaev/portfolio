@@ -49,3 +49,74 @@ a:hover {
   text-decoration: underline;
 }
 
+#education .education-item,
+#experience .experience-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-header,
+.experience-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.education-duration,
+.experience-duration {
+  font-style: italic;
+  color: #777;
+}
+
+.education-description,
+.experience-description {
+  margin: 0;
+}
+
+#about .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: #333;
+}
+

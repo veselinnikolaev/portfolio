@@ -1,71 +1,82 @@
 .projects-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .project-item {
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.3s;
-  }
-  
-  .project-item:hover {
-    background-color: #f9f9f9;
-  }
-  
-  .project-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  
-  .language-point {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .language-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  
-  .project-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    opacity: 0;
-  }
-  
-  .project-details.expanded {
-    max-height: 200px; /* Adjust height based on your content */
-    opacity: 1;
-  }
-  
-  /* Colors for different languages */
-  .language-point.yellow {
-    background-color: #f1c40f; /* Yellow */
-  }
-  
-  .language-point.blue {
-    background-color: #3498db; /* Blue */
-  }
-  
-  .language-point.brown {
-    background-color: #795548; /* Brown */
-  }
-  
-  /* Default color */
-  .language-point.default {
-    background-color: #ccc; /* Gray or any default color you choose */
-  }
-  
-  .project-photo {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-item {
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+  margin-bottom: 1rem;
+}
+
+.project-item:hover {
+  background-color: #f9f9f9;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+.language-point {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.language-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.project-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  opacity: 0;
+  padding: 0 1rem;
+}
+
+.project-details.expanded {
+  max-height: 1000px; /* Adjust height based on your content */
+  opacity: 1;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background-color: #fff;
+}
+
+/* Colors for different languages */
+.language-point.yellow {
+  background-color: #f1c40f; /* Yellow */
+}
+
+.language-point.blue {
+  background-color: #3498db; /* Blue */
+}
+
+.language-point.brown {
+  background-color: #795548; /* Brown */
+}
+
+/* Default color */
+.language-point.default {
+  background-color: #ccc; /* Gray or any default color you choose */
+}
+
+.project-photo {
+  width: 100%; /* Ensures the image takes up the full width of its container */
+  height: auto; /* Maintains the aspect ratio of the image */
+  object-fit: contain; /* Ensures the entire image is visible without cropping */
+  margin-bottom: 1rem;
+}

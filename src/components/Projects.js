@@ -1,12 +1,19 @@
 import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 
+// Import images
+import dartsImage from '../images/darts.png';
+import fffImage from '../images/fff.png';
+import myMovieAppImage from '../images/mymovieapp.png';
+import dictionaryAppImage from '../images/dictionaryapp.png';
+import findAStarImage from '../images/find-a-star.png';
+
 const projects = [
-  { name: 'Darts', description: 'REST, Front-End, JSON Processing, Validation', date: '04/2024 - 06/2024', primaryLanguage: 'JavaScript', photo: './images/darts.png' },
-  { name: 'FFF', description: 'Database Migration MS SQL, Entity Framework Core, ASP.NET, Validation', date: '03/2024 - 06/2024', primaryLanguage: 'C#', photo: './images/fff.png' },
-  { name: 'MyMovieApp', description: 'Advanced Spring, Cloud Services, Mail Sending, Integration & Unit Testing', date: '11/2023 - 01/2024', primaryLanguage: 'Java', photo: './images/mymovieapp.png' },
-  { name: 'DictionaryApp', description: 'Basic Spring, Security, HTTP, Thymeleaf', date: '10/2023 - 10/2023', primaryLanguage: 'Java', photo: './images/dictionaryapp.png' },
-  { name: 'Find-a-Star', description: 'XML Processing, JSON Processing, Spring Data, Database Migration MySQL', date: '06/2023 - 06/2023', primaryLanguage: 'Java', photo: './images/find-a-star.png' },
+  { name: 'Darts', description: 'REST, Front-End, JSON Processing, Validation', date: '04/2024 - 06/2024', primaryLanguage: 'JavaScript', photo: dartsImage },
+  { name: 'FFF', description: 'Database Migration MS SQL, Entity Framework Core, ASP.NET, Validation', date: '03/2024 - 06/2024', primaryLanguage: 'C#', photo: fffImage },
+  { name: 'MyMovieApp', description: 'Advanced Spring, Cloud Services, Mail Sending, Integration & Unit Testing', date: '11/2023 - 01/2024', primaryLanguage: 'Java', photo: myMovieAppImage },
+  { name: 'DictionaryApp', description: 'Basic Spring, Security, HTTP, Thymeleaf', date: '10/2023 - 10/2023', primaryLanguage: 'Java', photo: dictionaryAppImage },
+  { name: 'Find-a-Star', description: 'XML Processing, JSON Processing, Spring Data, Database Migration MySQL', date: '06/2023 - 06/2023', primaryLanguage: 'Java', photo: findAStarImage },
 ];
 
 const Projects = () => {
@@ -35,12 +42,12 @@ const Projects = () => {
                 </div>
               </div>
               <div className={`project-details ${expandedIndex === index ? 'expanded' : ''}`}>
-                <img src={project.photo} alt={`${project.name} screenshot`} className="project-photo img-fluid rounded" />
+                <img src={project.photo} alt={`${project.name} screenshot`} className="project-photo" />
                 <p>{project.description}</p>
                 <div style={{display: 'flex', alignItems: 'center', marginBottom: '10px', justifyContent: 'space-between'}}>
                   <p>{project.date}</p>
                   <a href={`https://github.com/veselinnikolaev/${project.name}`} target="_blank" rel="noopener noreferrer">
-                    <FaGithub style={{ fontSize: '2rem' }}  />
+                    <FaGithub style={{ fontSize: '2rem' }} />
                   </a>
                 </div>
               </div>
