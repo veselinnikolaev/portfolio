@@ -1,51 +1,43 @@
 import { useEffect, useState } from 'react';
 
 const Header = () => {
-  const [navbarHeight, setNavbarHeight] = useState(0);
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true); // State to manage navbar collapse
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-      const navbarRect = navbar.getBoundingClientRect();
-      setNavbarHeight(navbarRect.height);
-    }
-
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach(section => {
-        const sectionId = section.getAttribute('id');
-        const sectionTop = section.offsetTop - navbarHeight;
-        const sectionBottom = sectionTop + section.offsetHeight;
-        const scrollPosition = window.scrollY;
+      const currentScrollPos = window.pageYOffset;
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-          const navLinks = document.querySelectorAll('.nav-link');
-          navLinks.forEach(link => link.classList.remove('active'));
-          const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-          if (activeLink) {
-            activeLink.classList.add('active');
-          }
-        }
-      });
+      if (prevScrollPos > currentScrollPos) {
+        setVisible(true); // Scrolling up
+      } else {
+        setVisible(false); // Scrolling down
+      }
+
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [navbarHeight]);
+  }, [prevScrollPos]);
 
   const handleNavCollapse = () => {
-    setIsNavCollapsed(!isNavCollapsed); // Toggle navbar collapse state
+    setIsNavCollapsed(!isNavCollapsed);
   };
 
   const handleNavItemClick = () => {
-    setIsNavCollapsed(true); // Collapse navbar when a nav link is clicked
+    setIsNavCollapsed(true);
   };
 
   return (
-    <header className="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top">
+    <header 
+      className={`navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top ${visible ? 'navbar-visible' : 'navbar-hidden'}`} 
+      style={{ transition: 'top 0.3s' }}
+    >
       <div className="container">
         <a className="navbar-brand" href="#home">
           <img src="logo.png" alt="Profile" className="img-fluid rounded-circle header-image" />
@@ -56,9 +48,9 @@ const Header = () => {
           data-toggle="collapse" 
           data-target="#navbarNav" 
           aria-controls="navbarNav" 
-          aria-expanded={!isNavCollapsed ? true : false} // Toggle aria-expanded attribute
+          aria-expanded={!isNavCollapsed ? true : false}
           aria-label="Toggle navigation"
-          onClick={handleNavCollapse} // Call handleNavCollapse function on click
+          onClick={handleNavCollapse}
         >
           <span className="navbar-toggler-icon"></span>
         </button>

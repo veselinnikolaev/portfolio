@@ -63,3 +63,9 @@
     background-color: #ccc; /* Gray or any default color you choose */
   }
   
+  .project-photo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  

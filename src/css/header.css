@@ -5,3 +5,12 @@
   .navbar-nav .nav-link.active {
     color: #3498db; /* Active link color */
   }
+
+  .navbar-visible {
+    top: 0;
+  }
+  
+  .navbar-hidden {
+    top: -100px; /* Adjust this value based on your navbar height */
+  }
+  
