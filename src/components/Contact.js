@@ -1,49 +1,56 @@
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
   return (
     <section id="contact" className="my-5">
       <div className="container">
-        <h2 className="text-center">Contact</h2>
-        <div className="row justify-content-center align-items-center">
-          <div className="col-md-4 text-center">
-            <p>
-              <a href="mailto:vslnnikolaev@gmail.com">
-                <FaEnvelope className="icon" />
+        <h2 className="text-center mb-4">Contact Me</h2>
+        <div className="row justify-content-center">
+          <div className="col-md-4 mb-4">
+            <div className="contact-method text-center">
+              <FaEnvelope className="icon mb-3" size={40} />
+              <h4>Email Me</h4>
+              <p>For any inquiries or collaboration opportunities, feel free to send me an email.</p>
+              <a href="mailto:vslnnikolaev@gmail.com" className="btn btn-primary mt-2">
+                Send Email
               </a>
-              <a href="tel:+359895566351">
-                <FaPhone className="icon" />
+            </div>
+          </div>
+          <div className="col-md-4 mb-4">
+            <div className="contact-method text-center">
+              <FaLinkedin className="icon mb-3" size={40} />
+              <h4>Connect on LinkedIn</h4>
+              <p>Let's connect on LinkedIn and stay updated with my latest professional activities.</p>
+              <a href="https://linkedin.com/in/veselin-nikolaev-070298296" className="btn btn-primary mt-2">
+                Connect
               </a>
-              <a href="https://linkedin.com/in/veselin-nikolaev-070298296">
-                <FaLinkedin className="icon" />
+            </div>
+          </div>
+          <div className="col-md-4 mb-4">
+            <div className="contact-method text-center">
+              <FaGithub className="icon mb-3" size={40} />
+              <h4>GitHub Projects</h4>
+              <p>Check out my latest projects and code contributions on GitHub.</p>
+              <a href="https://github.com/veselinnikolaev" className="btn btn-primary mt-2">
+                View GitHub
               </a>
-              <a href="https://github.com/veselinnikolaev">
-                <FaGithub className="icon" />
-              </a>
-            </p>
+            </div>
           </div>
         </div>
-        <div className="row justify-content-center">
-          <div className="col-md-8">
-            <form>
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" className="form-control" id="name" placeholder="Your Name" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" className="form-control" id="email" placeholder="Your Email" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="subject">Subject</label>
-                <input type="text" className="form-control" id="subject" placeholder="Subject" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea className="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary">Send Message</button>
-            </form>
+        <div className="row justify-content-center mt-5">
+          <div className="col-md-8 text-center">
+            <h3>Find Me</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.865451893573!2d27.92319541601464!3d43.21024397913862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4531031e17413%3A0x2be42d306b4a1f89!2sHigh%20School%20of%20Mathematics%2C%20Varna!5e0!3m2!1sen!2sbg!4v1629117314553!5m2!1sen!2sbg"
+              width="100%"
+              height="300"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+              tabIndex="0"
+              title="Google Maps"
+            ></iframe>
           </div>
         </div>
       </div>
