@@ -1,0 +1,7 @@
+.header-image {
+    max-width: 100px; /* Adjust the size as needed */
+  }  
+
+  .navbar-nav .nav-link.active {
+    color: #3498db; /* Active link color */
+  }

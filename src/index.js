@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
+import './css/contact.css';
+import './css/header.css';
+import './plugins/jquery.fancybox-1.3.4/style.css'
+import './css/projects.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,0 +1,22 @@
+#contact {
+    padding: 2em 0;
+  }
+  
+  #contact h2 {
+    margin-bottom: 1em;
+  }
+  
+  #contact .icon {
+    margin: 0.5em;
+    font-size: 2em;
+    color: #007bff;
+  }
+  
+  #contact .form-group {
+    margin-bottom: 1em;
+  }
+  
+  #contact .btn {
+    margin-top: 1em;
+  }
+  

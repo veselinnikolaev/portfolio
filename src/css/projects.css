@@ -1,0 +1,65 @@
+.projects-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .project-item {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+  }
+  
+  .project-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .language-point {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .language-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
+  }
+  
+  .project-details.expanded {
+    max-height: 200px; /* Adjust height based on your content */
+    opacity: 1;
+  }
+  
+  /* Colors for different languages */
+  .language-point.yellow {
+    background-color: #f1c40f; /* Yellow */
+  }
+  
+  .language-point.blue {
+    background-color: #3498db; /* Blue */
+  }
+  
+  .language-point.brown {
+    background-color: #795548; /* Brown */
+  }
+  
+  /* Default color */
+  .language-point.default {
+    background-color: #ccc; /* Gray or any default color you choose */
+  }
+  
