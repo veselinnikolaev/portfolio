@@ -76,7 +76,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-primary ml-3" href="../Veselin's Resume.pdf" download>
+        <a className="btn btn-primary ml-3" href="VeselinResume.pdf" download>
           Download Resume
         </a>
       </div>
