@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import './css/styles.css';
 import Home from './components/Home';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Experience />
         <Contact />
       </div>
+      <Footer />
     </div>
 
   );
