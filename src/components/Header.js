@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import '../css/header.css'; // Import the CSS file
 
 const Header = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -9,8 +10,8 @@ const Header = () => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
 
-      if (prevScrollPos > currentScrollPos) {
-        setVisible(true); // Scrolling up
+      if (prevScrollPos > currentScrollPos || currentScrollPos === 0) {
+        setVisible(true); // Scrolling up or at the top
       } else {
         setVisible(false); // Scrolling down
       }
@@ -40,7 +41,7 @@ const Header = () => {
     >
       <div className="container">
         <a className="navbar-brand" href="#home">
-          <img src="logo.png" alt="Profile" className="img-fluid rounded-circle header-image" />
+          <img src="logo.png" alt="Profile" className="rounded-circle header-image" />
         </a>
         <button 
           className="navbar-toggler" 
@@ -56,22 +57,22 @@ const Header = () => {
         </button>
         <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
+            <li className="nav-item topBotomBordersIn">
               <a className="nav-link" href="#about" onClick={handleNavItemClick}>About</a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item topBotomBordersIn">
               <a className="nav-link" href="#projects" onClick={handleNavItemClick}>Projects</a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item topBotomBordersIn">
               <a className="nav-link" href="#skills" onClick={handleNavItemClick}>Skills</a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item topBotomBordersIn">
               <a className="nav-link" href="#education" onClick={handleNavItemClick}>Education</a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item topBotomBordersIn">
               <a className="nav-link" href="#experience" onClick={handleNavItemClick}>Experience</a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item topBotomBordersIn">
               <a className="nav-link" href="#contact" onClick={handleNavItemClick}>Contact</a>
             </li>
           </ul>

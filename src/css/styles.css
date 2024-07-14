@@ -40,15 +40,6 @@ li {
   margin: 1em 0;
 }
 
-a {
-  color: #007acc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 #education .education-item,
 #experience .experience-item {
   background-color: #f9f9f9;

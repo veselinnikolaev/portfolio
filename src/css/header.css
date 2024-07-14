@@ -1,16 +1,71 @@
+/* header.css */
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1, header h2 {
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1em;
+  text-decoration: none;
+}
+
 .header-image {
-    max-width: 100px; /* Adjust the size as needed */
-  }  
+  max-width: 100px; /* Ensure it doesn't exceed its container's width */
+  transition: transform 0.3s ease-in-out; /* Animation on hover */
+}
 
-  .navbar-nav .nav-link.active {
-    color: #3498db; /* Active link color */
-  }
+.header-image:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
 
-  .navbar-visible {
-    top: 0;
-  }
-  
-  .navbar-hidden {
-    top: -100px; /* Adjust this value based on your navbar height */
-  }
-  
+.navbar-nav .nav-link.active {
+  color: #3498db; /* Active link color */
+}
+
+.navbar-visible {
+  top: 0;
+}
+
+.navbar-hidden {
+  top: -100px; /* Adjust this value based on your navbar height */
+}
+
+.topBotomBordersIn {
+  position: relative;
+}
+
+.topBotomBordersIn a:before,
+.topBotomBordersIn a:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.topBotomBordersIn a:before {
+  top: 0px;
+  transform: translateY(-10px);
+}
+
+.topBotomBordersIn a:after {
+  bottom: 0px;
+  transform: translateY(10px);
+}
+
+.topBotomBordersIn a:hover:before,
+.topBotomBordersIn a:hover:after {
+  opacity: 1;
+  transform: translateY(0px);
+}
